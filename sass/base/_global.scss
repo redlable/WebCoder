@@ -1,0 +1,33 @@
+//------------------------------------------------------------------------------
+// Global
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: $white;
+  font: 300 14px/18px 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $baseline;
+}
+
+
+/* Links */
+a {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

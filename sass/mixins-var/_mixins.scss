@@ -1,0 +1,112 @@
+//------------------------------------------------------------------------------
+// Main sprite
+
+@mixin sprite($sprite, $x, $y, $bg-color:transparent) {
+  background:$bg-color url($sprite) no-repeat $x $y;
+}
+
+//------------------------------------------------------------------------------
+//  Links
+@mixin links( $color: #f37ad9, $hover: #9a9995, $dec: false) {
+  color: $color;
+
+  @if $dec == true {
+    text-decoration: underline;
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $dec == false {
+    text-decoration: none;
+     &:hover {
+      color: $hover;
+    }
+  }
+
+}
+
+//------------------------------------------------------------------------------
+// REM Font size
+
+@mixin font-size($sizeValue: 16){
+  font-size: ($sizeValue) + px;
+  // font-size: ($sizeValue / 10) + rem;
+}
+
+
+//------------------------------------------------------------------------------
+// Input fields
+
+@mixin inputs( $width: auto, $height: auto, $border: none, $color: black) {
+  height: $height;
+  width: $width;
+  border: $border;
+  background-color: #fff;
+  padding: 0 5px;
+  color: $color;
+}
+
+
+//------------------------------------------------------------------------------
+// Submit Button
+
+@mixin submit( $width: auto, $height: auto, $border: none, $color: #fff ) {
+  width: $width;
+  height: $height;
+  line-height: $height;
+  border: $border;
+  color: $color;
+  padding: 5px;
+}
+
+
+//------------------------------------------------------------------------------
+// Colored button
+
+@mixin btn($bg-color: #fff, $text-color: #000, $padding: 10px) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  text-transform: uppercase;
+  @include font-size(14);
+  @include inline-block;
+}
+
+
+//------------------------------------------------------------------------------
+// Abstract classes
+
+%no-border {
+  border: 0 none;
+}
+
+%no-padding {
+  padding: 0;
+}
+%no-margin {
+  margin: 0;
+}
+
+%centered {
+  text-align: center;
+}
+
+%max-width-500px {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+//------------------------------------------------------------------------------
+// Placeholder
+@mixin placeholder($color) {
+  &.placeholder {
+    color: $color;
+    }
+  &:-moz-placeholder {
+    color: $color;
+    }
+  &::-webkit-input-placeholder {
+    color: $color;
+    }
+}
+
