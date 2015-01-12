@@ -1,5 +1,15 @@
-.top-block {
+.top-block,
+.center-wrap-block,
+.three-col {
   margin: 0 auto;
   max-width: 960px;
   width: 100%;
+}
+
+.two-col {
+  .left-block,
+  .right-block {
+    float: left;
+    width: 50%;
+  }
 }

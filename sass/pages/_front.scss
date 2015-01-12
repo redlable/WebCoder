@@ -1,31 +1,44 @@
 .section {
+  clear: both;
+
   &.top {
     background: $orange-bg;
     padding: 20px 0;
   }
 
-  .title {
+  .form-title {
     color: $orange-text;
     font-size: 44px;
+  }
+
+  .title {
+    font-size: 31px;
   }
 
   .form-wrapper {
 
   }
 
+  .three-column-text {
+    @include column-count(3);
+    @include column-gap(20px);
+  }
+
   .top-block {
+    @include border-radius(3px);
     @include box-shadow(0 0 4px rgba($black, .45));
+    background: $top-block-bg;
     border: 1px solid rgba($black, .2);
     overflow: hidden;
   }
 
   .slider-wrapper,
-  .join-form {
+  .form-wrapper {
     float: left;
     width: 50%;
   }
 
-  .join-form {
-    background: $form-bg;
+  .slider-wrapper {
+    border-right: 1px solid $grey;
   }
 }

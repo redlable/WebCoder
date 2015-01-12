@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// Main slider
+.slider-wrapper {
+  position: relative;
+
+  li {
+    line-height: 0;
+  }
+
+  .bx-controls {
+    bottom: 10px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+  .bx-pager-item {
+    @include border-radius(50%);
+    @include box-shadow(0 0 3px rgba($white, .5));
+    @include inline-block(top);
+    background: rgba($black, .5);
+    height: 12px;
+    margin: 0 4px;
+    width: 12px;
+
+    a {
+      display: block;
+      height: 8px;
+      margin: 2px auto 0;
+      text-indent: -9999px;
+      width: 8px;
+
+      &.active {
+        @include border-radius(50%);
+        background: $orange-bg;
+      }
+    }
+  }
+}
